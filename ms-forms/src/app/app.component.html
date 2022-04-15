@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="form-center">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <header class="header">Entry form</header>
+    <div class="form-group" >
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="name" name="name" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <!-- <label for="select">select branch</label> -->
+      <select class="form-control" id="select" name="branch" [(ngModel)]="branch">
+        <option>Select Branch</option>
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>EEE</option>
+        <option>MECH</option>
+        <option>CIVIL</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label>Year</label>
+      <div class="form-control">
+        <label class="radio-inline">
+          <input type="radio" value="one" name="year" [(ngModel)]="year">I
+        </label>
+        &nbsp;
+        <label class="radio-inline">
+          <input type="radio" value="two" name="year" [(ngModel)]="year"> II
+        </label>
+        &nbsp;
+        <label class="radio-inline">
+          <input type="radio" value="three" name="year" [(ngModel)]="year">III
+        </label>
+&nbsp;
+        <label class="radio-inline">
+          <input type="radio" value="four" name="year" [(ngModel)]="year">IV
+        </label>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="feedback
+      ">Feedback</label>
+      <textarea class="form-control" id="feedback" rows="3" name="feed" [(ngModel)]="feed"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>
